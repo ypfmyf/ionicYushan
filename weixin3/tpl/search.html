@@ -1,0 +1,30 @@
+<!--搜索-->
+<div class="bar bar-header item-input-inset bar-stable heabiani">
+    <i class="ion-chevron-left" onclick="javascript:history.go(-1)"></i>
+    <span class="item-input-wrapper">
+        <i class="icon ion-ios-search placeholder-icon"></i>
+        <input id="search" type="text" placeholder="请输入商品名称/关键字" ng-model="inputKw.kw">
+        <i class="icon ion-close-circled placeholder-icon" style="vertical-align: middle;"
+           on-tap="clearSearch()" ng-if="inputKw.kw.length"></i>
+    </span>
+    <a class="button button-clear button-stable" href="#/Newon/{{searchkw.did}}" ng-disabled="!searchkw">搜索</a>
+</div>
+<ion-content class="has-header has-footer">
+    <div class="row souxia">
+            <div class="col">
+                <i class="ion-ios-clock-outline"></i>
+                <span>搜索历史</span>
+            </div>
+            <div class="col qingkong">
+                <span>清空</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col soubian" ng-repeat="Sear in searchkw">
+                <button class="button button-small button-outline button-stable">
+                    {{Sear.name}}
+                </button>
+
+            </div>
+        </div>
+    </ion-content>

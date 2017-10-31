@@ -1,0 +1,79 @@
+<!--个人信息-->
+<ion-nav-view>
+    <div class="bar bar-header bar-light">
+        <button onclick="javascript:history.go(-1)"  class="ion-chevron-left
+             button button-clear cheLe"></button>
+        <h1 class="title">个人信息</h1>
+    </div>
+    <ion-content class="has-header">
+        <div class="list">
+            <div class="item gerenxx">
+                <div class="row" ng-click="showAct()">
+                    <div class="col">
+                        头像
+                    </div>
+                    <div class="col gerenxxYou">
+                        <i class="icon ion-ios-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        用户名
+                    </div>
+                    <div class="col gerenxxYou">
+                        <span >18715119367</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        等级
+                    </div>
+                    <div class="col gerenxxYou">
+                        <span >普通会员</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        当前积分
+                    </div>
+                    <div class="col gerenxxYou">
+                        <span >500</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        消费总金额
+                    </div>
+                    <div class="col gerenxxYou">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        真实姓名
+                    </div>
+                    <div class="col paintop" >
+                        <input type="text" placeholder="请填写真实姓名"/>
+                    </div>
+                </div>
+                <div class="row" ng-click="openDatePicker()">
+                    <div class="col">
+                        出生日期
+                    </div>
+                    <div class="col paintop" >
+                        <input type="text" placeholder="请填写出生日期" ng-model="DateList"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        QQ号
+                    </div>
+                    <div class="col paintop" >
+                        <input type="text" placeholder="请填写QQ号"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="button button-full button-assertive">保存</button>
+    </ion-content>
+</ion-nav-view>

@@ -1,0 +1,134 @@
+<!--订单确认-->
+<div class="bar bar-header bar-light">
+    <button onclick="javascript:history.go(-1)" class="ion-chevron-left
+             button button-clear cheLe"></button>
+    <h1 class="title">订单确认</h1>
+</div>
+<ion-content class="has-header has-footers xuanshdz">
+    <div class="list">
+        <!--<div class="item item-icon-right xbeijin" ng-click="jump('ysMyPleis')">-->
+        <!--请选择收货地址-->
+            <!--<i class="icon ion-ios-arrow-right"></i>-->
+        <!--</div>-->
+        <div class="item item-icon-right xbeijin" ng-click="jump('ysMyPleis')">
+
+            <p>收货人：余鹏飞 <span class="youshou">187151193637</span></p>
+            <p>收货地址：上海市静安区</p>
+            <i class="icon ion-ios-arrow-right"></i>
+        </div>
+    </div>
+    <div class="list shangpqd">
+        <div class="item">
+            商品清单
+            <span>（1）</span>
+        </div>
+        <div class="item">
+            <div class="row">
+                <div class="col col-25">
+                    <img ng-src="img/{{order.cartDetail.img_sm01}}" alt=""/>
+                </div>
+                <div class="col col-60">
+                    <p>{{order.cartDetail.name}}</p>
+                    <p>{{casedd.material}}</p>
+                </div>
+                <div class="col col-15">
+                    <h4>￥{{casedd.price}}</h4>
+                    <span>&nbsp &nbsp &nbsp &nbspX1</span>
+                </div>
+            </div>
+        </div>
+        <label class="item item-input">
+            <span class="input-label">添加订单备注</span>
+            <input type="text" placeholder="限50个字">
+        </label>
+    </div>
+    <div class="list">
+        <a class="item item-icon-right" href="#">
+            <div class="pzfby">
+                <span>配送方式</span>
+                <span class="pzfby_p">快递物流</span>
+            </div>
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+        <a class="item item-icon-right" href="#">
+            <div class="pzfby">
+                <span>支付方式</span>
+                <span class="pzfby_p">在线支付</span>
+            </div>
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+        <a class="item item-icon-right" href="#">
+            <div class="pzfby">
+                <span>发票信息</span>
+                <span class="pzfby_p">不开纸质发票</span>
+            </div>
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+    </div>
+    <div class="list">
+        <a class="item item-icon-right" href="#">
+            <div class="pzfby">
+                <span>包邮活动</span>
+                <span class="pzfby_p">不免邮费</span>
+            </div>
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+        <a class="item item-icon-right" href="#">
+            <div class="pzfby">
+                <span>优惠券/折扣卷(0)</span>
+                <span class="pzfby_p">请选择</span>
+            </div>
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+    </div>
+    <div class="list">
+        <div class="item">
+            <div class="row bhongcu">
+                <div class="col col-80">
+                    <a class="jiahei">商品金额（不含运费)</a>
+                </div>
+                <div class="col">
+                    <span>
+                        <b>￥{{money}}</b>
+                    </span>
+
+                </div>
+            </div>
+            <div class="row bhongcu">
+                <div class="col col-80">
+                    <a>邮费</a>
+                </div>
+                <div class="col">
+                    <span>+&nbsp￥0.00</span>
+                </div>
+            </div>
+            <div class="row bhongcu">
+                <div class="col col-80">
+                    <a>优惠券/折扣卷</a>
+                </div>
+                <div class="col">
+                    <span>-&nbsp￥0.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="list">
+        <div class="item item-icon-right">
+        </div>
+    </div>
+</ion-content>
+<ion-tabs class="tabs-icon-top jiesuan">
+    <div class="row">
+        <div class="col col-40 " align="left">
+            应付总金额：
+        </div>
+        <div class="col col-30" align="center">
+            <h4>￥{{money}}</h4>
+        </div>
+        <div class="col col-30" align="right">
+            <button class="button button-small button-assertive" ng-click="jump('ysPayment')">提交订单</button>
+        </div>
+
+    </div>
+</ion-tabs>
+

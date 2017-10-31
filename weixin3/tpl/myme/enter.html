@@ -1,0 +1,37 @@
+<!--登录-->
+<div class="bar bar-header bar-light">
+    <button onclick="javascript:history.go(-1)" class="ion-chevron-left
+            button button-clear cheLe"></button>
+    <h1 class="title">登录</h1>
+</div>
+<ion-content class="has-header">
+    <form name="myForm" novalidate>
+        <div class="list card spincar">
+            <label class="item item-input">
+                <span class="input-label lasouin">手机号:</span>
+                <input type="number" placeholder="请输入手机号"
+                       name="phone" id="phone" ng-minlength="11" ng-maxlength="11"
+                       ng-pattern="/^(((1[0-9]{2})|159|153)+\d{8})$/"
+                       ng-model="formUser.phoneText" required/>
+                <i class="icon ion-close-circled assertive" ng-show="myForm.phone.$dirty && myForm.phone.$invalid"></i>
+                <i class="icon ion-checkmark-circled balanced" ng-show="myForm.phone.$dirty && myForm.phone.$valid"></i>
+            </label>
+            <label class="item item-input ">
+                <span class="input-label lasouin">密码:</span>
+                <input type="password" placeholder="6-32位字母数字组合" name="pwd" id="pwd" ng-minlength="6" ng-maxlength="32" ng-model="formUser.password" required>
+                <i class="icon ion-close-circled assertive" ng-show="myForm.pwd.$dirty && myForm.pwd.$invalid"></i>
+                <i class="icon ion-checkmark-circled balanced" ng-show="myForm.pwd.$dirty && myForm.pwd.$valid"></i>
+            </label>
+        </div>
+        <input  class="button  button-block button-small button-positive" type="submit" ng-disabled="myForm.$invalid" ng-click="doLogin()" value="登录"/>
+    </form>
+        <div class="row">
+            <div class="col col-33">
+                <a href="#/Register">注册</a>
+            </div>
+            <div class="col col-33 col-offset-33">
+                <a href="#/Forget">忘记密码？</a>
+            </div>
+        </div>
+
+</ion-content>

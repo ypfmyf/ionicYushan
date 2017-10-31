@@ -1,0 +1,166 @@
+<!--首页-->
+<!--<ion-view>-->
+    <ion-content class="has-footer" delegate-handle="mycontent">
+        <!--轮播-->
+        <ion-slide-box auto-play="true" does-continue="true" slide-interval=2000 ng-repeat="Lun in MainImgLogo">
+            <ion-slide>
+                <div class="box banner"><img ng-src="img/{{Lun.img_logo01}}"/> </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box banner"><img ng-src="img/{{Lun.img_logo02}}"></div>
+            </ion-slide>
+            <ion-slide on-slide-changed="slideHasChanged(index)">
+                <div class="box banner"><img ng-src="img/{{Lun.img_logo03}}"/></div>
+            </ion-slide>
+        </ion-slide-box>
+        <div class="row  bianyuani">
+            <div class="col">
+                <a class="tab-item" href="#/About">
+                    <i class="icon ion-ios-pricetags-outline"></i>
+                    关于我们
+                </a>
+            </div>
+            <div class="col">
+                <a class="tab-item" href="#/Promotion">
+                    <i class="icon ion-ios-flower-outline"></i>
+                    热销
+                </a>
+            </div>
+            <div class="col">
+                <a class="tab-item" href="#/Coupon"><i class="icon ion-ios-filing"></i>
+                    领取优惠卷</a>
+            </div>
+            <div class="col">
+                <a class="tab-item" href="#/Shopp">
+                    <i class="icon ion-ios-cart"></i>
+                    我的购物车
+                </a>
+            </div>
+        </div>
+        <!--Logo-->
+        <div class="list qubianks" ng-repeat="Logo in MainImgLogo">
+            <div class="item bianimg">
+                <img ng-src="img/{{Logo.img_logo}}" alt=""/>
+            </div>
+        </div>
+        <!--商品-->
+        <div class="list">
+            <div class="item item-divider bowu">
+                <!--热销-->
+                <div class="row xiahuaxian">
+                    <p class="col">热销</p>
+                    <div class="col chakan"><a href="#/Promotion">查看更多 ></a></div>
+                </div>
+                <!--促销展示-->
+                <div class="row row-wrap">
+                    <div class="col"  ng-repeat="Sell in MainjiaSell">
+                        <div class="item bowu">
+                            <a href="#/Detail/{{Sell.did}}">
+                                <img ng-src="img/{{Sell.img_sm01}}" alt=""/>
+                            </a>
+                            <p>{{Sell.name}}</p>
+                            <h4>价格：{{Sell.price}}</h4>
+                            <p>销量：{{Sell.detail}}</p>
+                        </div>
+                    </div>
+                </div>
+                <!--精品-->
+                <div class="row xiahuaxian">
+                    <p class="col">精品</p>
+                </div>
+                <!--精品展示-->
+                <div class="row row-wrap">
+                    <div class="col" ng-repeat="Wife in MainjiaWife">
+                        <div class="item bowu" >
+                            <a href="#/Detail/{{Wife.did}}" >
+                                <img ng-src="img/{{Wife.img_sm01}}" alt=""/>
+                            </a>
+                            <p>{{Wife.name}}</p>
+                            <h4>价格：{{Wife.price}}</h4>
+                            <p>销量：{{Wife.detail}}</p>
+                        </div>
+                    </div>
+                </div>
+                <!--新品-->
+                <div class="row xiahuaxian">
+                    <p class="col">新品</p>
+                    <div class="col chakan"><a href="#/Newon">查看更多 ></a></div>
+                </div>
+                <!--新品展示-->
+                <div class="row row-wrap">
+                    <div class="col col-50" ng-repeat="New in MainjiaBy track by $index">
+                        <div class="item bowu">
+                            <a href="#/Detail/{{New.did}}">
+                                <img ng-src="img/{{New.img_sm01}}" alt=""/>
+                            </a>
+                            <p>{{New.name}}</p>
+                            <h4>价格:{{New.price}}</h4>
+                            <p>销量：{{New.detail}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--优惠卡卷-->
+                <div class="row xiahuaxian">
+                    <div class="col">
+                        <p>优惠卡卷</p>
+                    </div>
+                    <div class="col">
+                        <div class="col chakan"><a href="#/Coupon">查看更多 ></a></div>
+                    </div>
+                </div>
+                <!--优惠卡卷展示-->
+                <div class="item item-text-wrap youbei">
+                    <div class="row">
+                        <div class="col" align="center">
+                            <h2>优惠卷</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-40">
+                            <h1>￥10</h1>
+                        </div>
+                        <div class="col col-60 col-offset-0">
+                            <h2>（满100元使用）</h2>
+                            <h2>全店通用</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-40">
+                            <h2>活动时间：</h2>
+                        </div>
+                        <div class="col col-60 col-offset-0">
+                            <h2>2017-10-01 00:00:00</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-50 col-offset-33">
+                            <h2>2018-10-01 00:00:00</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>全部商品</p>
+                        </div>
+                        <button class="button button-assertive">点击领取</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </ion-content>
+    <ion-header-bar no-tap-scroll='true'
+                    translucent-bar="mycontent"
+                    translucent-color-opacity="0.01"
+                    translucent-color="rgb(235,216,209)"
+                    translucent-scroll-maxtop="88"
+                    class="item-input-inset"
+            >
+        <label class="item-input-wrapper bInp" >
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="text" placeholder="请输入商品名称" ng-click="jump('ysSearch')"/>
+        </label>
+    </ion-header-bar>
+<!--</ion-view>-->
+
+

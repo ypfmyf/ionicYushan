@@ -1,0 +1,64 @@
+<!--储值卡-->
+<div class="bar bar-header bar-light">
+    <button onclick="javascript:history.go(-1)"  class="ion-chevron-left
+             button button-clear cheLe"></button>
+    <h1 class="title">储值卡</h1>
+</div>
+<ion-content class="has-header xuanshdz" ne-isclick>
+    <div class="list">
+        <div class="item">
+            <div class="row">
+                <div class="col">
+                    <span>
+                        我的余额
+                    </span>
+                </div>
+            </div>
+            <div class="row jiacubian">
+                <div class="col col-20">
+                    <p>
+                        <span>0</span>
+                        元
+                    </p>
+                </div>
+                <div class="col">
+                    <button class="button button-outline button-small button-energized">去充值</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="list">
+        <div class="item zffs">
+            <div class="row">
+                <div class="col col-49 keh3c">
+                    <a ng-class="{xinbianC:isWon1,xinbianD:isNe1}" ng-click="NeClick1()">充值</a>
+                </div>
+                <div class="col col-2">
+                    <p class="keypb"></p>
+                </div>
+                <div class="col col-49 keh3c">
+                    <a ng-class="{xinbianC:isWon2,xinbianD:isNe2}" ng-click="NeClick2()">消费</a>
+                </div>
+            </div>
+        </div>
+        <!--充值数据只有充值的时候才显示-->
+        <!--<div class="item zffs">-->
+            <!--<div class="row">-->
+                <!--<div class="col">-->
+                    <!--<span>您已经充值</span>-->
+                    <!--<br/>-->
+                    <!--<a>2017-09-20 10:58:31</a>-->
+                <!--</div>-->
+                <!--<div class="col">-->
+                    <!--<h4 align="center">500元</h4>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+    <div class="row">
+        <div class="col zanxian">
+            <a>暂无充值记录</a>
+        </div>
+    </div>
+</ion-content>

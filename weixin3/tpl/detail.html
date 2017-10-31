@@ -1,0 +1,89 @@
+<!--详情页-->
+<div class="bianxiang">
+    <a onclick="javascript:history.go(-1)" class="ion-ios-arrow-left"></a>
+</div>
+<ion-content class="has-footer">
+    <!--轮播-->
+    <ion-slide-box auto-play="true" does-continue="true" slide-interval=2000>
+        <ion-slide>
+            <div class="box banner"><img ng-src="img/{{dish.img_sm01}}"/> </div>
+        </ion-slide>
+        <ion-slide>
+            <div class="box banner"><img ng-src="img/{{dish.img_sm02}}"></div>
+        </ion-slide>
+        <ion-slide on-slide-changed="slideHasChanged(index)">
+            <div class="box banner"><img ng-src="img/{{dish.img_sm03}}"/></div>
+        </ion-slide>
+    </ion-slide-box>
+    <div class="list cuList">
+        <div class="item item-divider">
+            <h3>{{dish.name}}：{{dish.material}}</h3>
+            <p>
+                <span id="chuxiao">促销价:</span>
+                <span id="cxrmib">￥{{dish.price}}</span>
+                <s id="cxrmis">市场价:￥{{dish.price}}</s>
+            </p>
+            <p>
+                <span>月销量:0</span>
+                <span class="jifen">运费:{{dish.pinkage}}</span>
+            </p>
+        </div>
+    </div>
+    <div class="list youhuibei">
+        <a class="item item-icon-right" href="#">
+            <p>优惠卡卷</p>
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+    </div>
+    <div class="list youhuibei">
+        <a class="item item-icon-right" href="#/Evaluate">
+            <p>商品评价 0人评价</p>
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
+        <div class="item pinglun">
+            <div class="row">
+                <div class="col">暂无评论</div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a href="#/MyLeave">咨询</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="list youhuibei jiagaoimg">
+        <div class="item">
+            <p>产品详情</p>
+        </div>
+        <div class="item">
+            <img ng-src="img/{{dish.img_lg01}}" alt=""/>
+        </div>
+        <div class="item">
+            <img ng-src="img/{{dish.img_lg02}}" alt=""/>
+        </div>
+        <div class="item">
+            <img ng-src="img/{{dish.img_lg03}}" alt=""/>
+        </div>
+    </div>
+
+</ion-content>
+<ion-tabs class="tabs-icon-top jiesuan" ne-isclick>
+        <div class="row">
+            <div class="col col-30" align="center">
+                <button class="button button-small button-clear button-calm
+                ion-android-star-outline
+                icon-left">收藏</button>
+                <button class="button button-small button-clear button-assertive
+                ion-android-cart
+                icon-left " ng-click="jump('ysShopp')" ng-model="isShopp">
+                    购物车
+                    <i>{{data.totalNumInCount}}</i>
+                </button>
+            </div>
+            <div class="col col-70" align="right">
+                <button class="button button-small button-assertive" ng-click="addToCart()">加入购物车</button>
+                <button class="button button-small button-energized" ng-click="jump('ysConfirmation')">立即购买</button>
+            </div>
+
+        </div>
+</ion-tabs>

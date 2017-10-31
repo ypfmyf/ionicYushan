@@ -1,0 +1,70 @@
+<!--购物中心-->
+<ion-view>
+    <div class="bar bar-header bar-light">
+        <button onclick="javascript:history.go(-1)"  class="ion-chevron-left
+             button button-clear cheLe"></button>
+        <h1 class="title">全部货品</h1>
+        <button class="button button-clear button-assertive" ng-click="toggleEdit()" ng-show="editTex">清空</button>
+    </div>
+    <ion-content class="has-header has-footer conbackb" ng-show="hasDish">
+        <div class="list">
+            <div class="item heaL" ng-repeat="shopp in cart track by $index">
+                <div class="row">
+                    <div class="col col-10">
+                        <label class="checkbox">
+                            <input type="checkbox" ng-checked="shopp.checked" ng-click="echoChange(selectAll)">
+                        </label>
+                    </div>
+                    <div class="col col-20">
+                        <img ng-src="img/{{shopp.img_sm01}}" alt=""/>
+                    </div>
+                    <div class="col col-50 biansanma">
+                        <p>{{shopp.name}}</p>
+                        <span>{{shopp.material}}</span>
+                        <h4>￥{{shopp.price}}</h4>
+                        <div class="ainjj">
+                            <a ng-click="delete($index)">-</a>
+                            <input type="text" value="{{shopp.dishCount}}"/>
+                            <a ng-click="add($index)">+</a>
+                        </div>
+                    </div>
+                    <div class="col shanda" ng-click="shangchu(shopp.ctid,$index)">
+                        <i class="icon ion-ios-trash-outline"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="list" ng-show="hasDishli">
+            <div class="item heaL">
+                <div class="row">
+                    <div class="col col-20">
+                        <label class="checkbox">
+                            <input type="checkbox" ng-model="selectAll" ng-click="selectAllClick(selectAll)">
+                        </label>
+                    </div>
+                    <div class="col col-50">
+                        <div class="hjhb">
+                            <h4 class="heji"> 合计:</h4>
+                            <h4>￥{{sumAll()}}.00</h4>
+                            <span>(不含运费)</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <button class="button button-assertive" ng-click="jumpToOrder()">立即结算</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+    <ion-content class="has-header has-footer conbackb" ng-hide="hasDish">
+        <div class="row">
+            <div class="col zanxian">
+                <p>您购物车里空空的</p>
+                <a ng-click="jump('ysMainJia')" class="button button-outline button-energized">随便逛逛</a>
+            </div>
+        </div>
+    </ion-content>
+    <div class="f0">
+
+    </div>
+</ion-view>

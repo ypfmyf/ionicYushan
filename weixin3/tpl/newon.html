@@ -1,0 +1,71 @@
+<!--新品-->
+<div class="bar bar-header item-input-inset bar-stable heabiani">
+    <i class="ion-chevron-left" onclick="javascript:history.go(-1)"></i>
+    <label class="item-input-wrapper">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input ng-model="inputTxt.kw" type="text" placeholder="请输入商品名称/关键字" ng-click="jump('ysSearch')"/>
+    </label>
+    <!--<button class="icon ion-ios-settings headsou" ng-click="headsouClick1()" ng-show="hasMore"></button>-->
+    <!--<button class="icon ion-ios-settings-strong headsou" ng-click="headsouClick2()" ng-hide="hasMore"></button>-->
+</div>
+<div class="tabs-striped tabs-top tabs-background-light"  ne-isclick>
+    <div class=" xiaosuoxiao">
+        <div class="row">
+            <div class="col">
+                <a ng-class='{xinbianA:isWon1,xinbianB:isNe1}' ng-click="NeClick1()">
+                    综合
+                    <i class="icon ion-ios-arrow-down"></i>
+                </a>
+            </div>
+            <div class="col">
+                <a ng-class='{xinbianA:isWon2,xinbianB:isNe2}' ng-click="NeClick2()">
+                    新品
+                    <i class="icon ion-ios-arrow-down"></i>
+                </a>
+            </div>
+            <div class="col">
+                <a ng-class='{xinbianA:isWon3,xinbianB:isNe3}' ng-click="NeClick3()">
+                    销量
+                    <i class="icon ion-ios-arrow-down"></i>
+                </a>
+            </div>
+            <div class="col">
+                <a ng-class='{xinbianA:isWon4,xinbianB:isNe4}' ng-click="NeClick4()" >
+                    价格
+                    <i class="icon ion-ios-arrow-down"></i>
+                </a>
+            </div>
+            <div class="col">
+                <a ng-class='{xinbianA:isWon5,xinbianB:isNe5}' ng-click="NeClick5()" class="shaibian">
+                    <i class="icon ion-ios-settings"></i>
+                    筛选
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<ion-content class="has-header topStart">
+        <div class="list">
+            <div class="item item-divider">
+                <div class="row row-wrap">
+                    <div class="col col-50">
+                        <div class="item bowu bowua">
+                            <img ng-src="img/{{newonX.img_sm01}}" alt="" ng-click="jump('ysDetail')"/>
+                            <p>{{newonX.name}}</p>
+                            <h4>价格:{{newonX.price}}</h4>
+                            <p>销量：{{newonX.detail}}
+                              <button class="icon ion-ios-cart-outline cartBian" ng-click="jiagouClick()"></button>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <!--<div class="row">-->
+                <!--</div>-->
+                <!--<div class="row">-->
+                <!--</div>-->
+            </div>
+        </div>
+
+</ion-content>
+

@@ -1,0 +1,27 @@
+<!--分类-->
+
+    <ion-content class="has-header flbeijing">
+        <div class="row rowbiankua" >
+            <div class="col col-25 bianjua">
+                <a ng-class='{warning:isWarning1}' ui-sref="ysInbox1" ng-click="color1Click()" ><img src="" alt=""/>纯茶油1</a><br/>
+                <a  ng-class='{warning:isWarning2}' ng-click="color2Click()" ui-sref="ysInbox2"><img src="" alt=""/>纯茶油2</a><br/>
+                <a ng-class='{warning:isWarning3}' ng-click="color3Click()"  ui-sref="ysInbox3" ><img src="" alt=""/>纯茶油3</a><br/>
+                <a ng-class='{warning:isWarning4}' ng-click="color4Click()" ui-sref="ysInbox4"><img src="" alt=""/>纯茶油4</a><br/>
+                <a ng-class='{warning:isWarning5}' ng-click="color5Click()" ui-sref="ysInbox5"><img src="" alt=""/>纯茶油5</a><br/>
+                <a ng-class='{warning:isWarning6}' ng-click="color6Click()" ui-sref="ysInbox6"><img src="" alt=""/>纯茶油6</a>
+                <a ng-class='{warning:isWarning7}' ng-click="color7Click()" ui-sref="ysInbox7"><img src="" alt=""/>纯茶油7</a><br/>
+                <a ng-class='{warning:isWarning8}' ng-click="color8Click()" ui-sref="ysInbox8"><img src="" alt=""/>纯茶油8</a>
+            </div>
+            <div class="col">
+                <ui-view></ui-view>
+            </div>
+        </div>
+    </ion-content>
+    <ion-header-bar class="item-input-inset bar-stable heabiani">
+        <label class="item-input-wrapper">
+            <input ng-model="inputTxt.kw" type="text" placeholder="请输入商品名称/关键字"/>
+        </label>
+        <button class="button button-clear button-stable" ng-click="jump('ysNewon')">搜索</button>
+    </ion-header-bar>
+
+
